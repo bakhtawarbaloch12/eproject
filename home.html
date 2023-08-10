@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kitchen ware</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<style>
+    body{
+        font-family: 'Poppins', sans-serif;
+        background: radial-gradient(rgb(224, 203, 248),#f7e756);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        color: aliceblue;
+    }
+    nav{
+        flex: 1;
+        text-align: right;
+    }
+    nav ul{
+        display: inline-block;
+        list-style: none;
+
+    }
+    nav li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: #555;
+    }
+    p{
+        color: #555;
+    }
+    .container{
+        max-width: 1300px;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .col-2{
+        padding-top: 3ch;
+        flex-basis: 50%;
+        min-width: 300px;
+    }
+    .col-2 img{
+        max-width: 100%;
+        padding: 50px 0;
+    }
+    .col-2 h1{
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+    }
+    .btn{
+        display: inline-block;
+        background: #d1b40d;
+        color: #fff;
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        transition: background 0.5s;
+    }
+    .btn:hover{
+        background: #563434;
+    }
+    .header{
+        background: radial-gradient(#fff,#ecf566);
+        background-image: url(https://m.media-amazon.com/images/I/71YrxpIpW+S._AC_SL1500_.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 600px;
+    
+    }
+    .header  .row{
+        margin-top: 70px;
+    }
+    .categories{
+        margin: 70px;
+
+    }
+    .col-3{
+        flex-basis: 30%;
+        min-width: 250px;
+        margin-bottom: 30px;
+    }
+    .col-3 img{
+        width: 100%;
+
+    }
+    .small-container{
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .col-4{
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.5s;
+    }
+    .col-4 img{
+        width: 100%;
+
+    }
+    h2{
+        text-align: center;
+        margin: 0% auto 80px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+    }
+    h2::after{
+        content: '';
+        background-color: #eb6f36;
+        width: 80px;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h4{
+        color: #555;
+        font-weight: normal;
+
+    }
+    .rating .fa{
+        color: #ff523b;
+    }
+    .col-4 p{
+        font-size: 14px;
+    }
+    .col-4 :hover{
+        transform: translateY(-5px);
+    }
+    .offer{
+        background: radial-gradient(#fff,#fae362);
+        margin-top: 80px;
+        padding: 30px 0;
+    }
+    .col-2 .offerimg{
+        padding: 50px;
+    }
+    small{
+        color: rgb(19, 9, 9);
+    }
+    .testimonial{
+        padding-top: 30px;
+
+    }
+    .testimonial .col-3{
+text-align: center;
+padding: 40 px 20 px;
+transition: transform 0.5s;
+    }
+    .testimonial .col-3 img{
+        width: 90px;
+        margin-top: 20px;
+        border-radius: 50%;
+    }
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #f1ee38;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0; 
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+.brands{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+.icon1style{
+    width: 1%;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+
+.iconstyle{
+    width: 2ch;}
+ul{
+    list-style-type: none;
+}
+
+
+
+
+.footer-distributed{
+	background: rgb(102, 102, 102);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #8d886c;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+</style>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="home.html"><img src="stopshoplogo.png" width="105px"></a>
+            </div>
+           <nav>
+                <ul id="MenuItems">
+                    <li> <a href="home.html">Home </a></li>
+                    <li> <a href="product.html">Products </a></li>
+                    <li> <a href="About.html"> About us</a></li>
+                    <li> <a href="contact.html">Contact </a></li>
+                    
+                </ul>
+
+            </nav>
+            <img src="https://www.iconpacks.net/icons/2/free-add-to-basket-icon-3042-thumb.png" alt="" width="30px" height="30px">
+      
+                </div>
+                <div class="row">
+<div class="col-2"></div>
+<h1>One Stop Shop for all your cooking needs</h1>
+<a href="product.html" class="btn">Explore Now &#8594;</a>
+
+                </div>
+    </div>
+</div>
+<div class="categories">
+    <div class="small-container">
+        <div>
+            <h2>
+                Product Categories
+            </h2>
+       <div class="row"   >  
+                <div class="col-3">
+                    <a href="bakeware.html"><h3>Cook ware & Bake ware</h3>
+                    <img src="Stovetop.jpg"></a>
+                </div>
+                    <div class="col-3">
+                       <a href="electric.html"><h3>Small appliances & Electric</h3>
+                        <img src="Blenders.jpg" ></a>
+                    </div>
+                        <div class="col-3">
+                            <a href="tandc.html"><h3>Table ware & Crockery</h3>
+                            <img src="tableware.jpg" ></a>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
+    <div class="small-container">
+
+<h2>
+    Featured Products
+</h2>
+<div class="row">
+    <div class="col-4">
+      <a href="first.html"><img  src="Acacia-min.jpg" alt=""></a>  
+    <h4> <a href="first.html"> Acacia Trivet </a> </h4>
+    <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class= "fa fa-star-o">></span>
+    </div>
+    <p>$14.95</p>
+   
+    </div>
+    <div class="col-4">
+        <a href="second.html"><img src="stainless-min.jpg" alt=""></a>
+    <a href="second.html"><h4>Grilling Utensils</h4></a>
+    <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class= "fa fa-star-o">></span>
+    </div>
+    <p>$19.95 each</p>
+</div>
+    <div class="col-4"> 
+        <a href="third.html"><img src="french-min(1).jpg" alt=""></a>
+    <a href="third.html"><h4>Rolling Pin with Stand</h4></a>
+    <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class= "fa fa-star-o">></span>
+    </div>
+    <p> $24.95</p>
+</div>
+    <div class="col-4">
+        <a href="forth.html"> <img src="oxo-min.jpg" alt=""></a>
+<a href="forth.html"><h4>Grilling Basting Pot and Brush Set</h4></a>
+<div class="rating">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class= "fa fa-star">></span>
+</div>
+<p>$25.95 </p>
+</div>
+    </div>
+    <h2> Latest Products</h2>
+    <div>
+        <div class="row">
+            <div class="col-4">
+<a href="fifth.html"><img src="Tea.jpg" ></a>
+<a href=""><h4>  Tea and coffee maker </h4></a>
+<div class="rating">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class= "fa fa-star-o">></span>
+</div>
+<p>$60</p>
+            </div>
+            <div class="col-4">
+                <a href="sixth.html"><img src="flask.jpg" ></a>
+               <a href="sixth.html"> <h4> Water Flask</h4> </a>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star"></span>
+                </div>
+                <p>$29</p>
+            </div>
+            <div class="col-4">
+                <a href="seventh.html"><img src="Knives.jpg" >   </a>
+                 <a href="seventh.html"><h4> Knives and Cuttlery </h4></a>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star-o">></span>
+                </div>
+                <p>$70</p>
+            </div>
+            <div class="col-4">
+               <a href="eight.html"><img src="Stovetop.jpg" > </a>
+               <a href="eight.html"> <h4> Stevetop </h4></a>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star-o">></span>
+                </div>
+                <p>$55</p>
+            </div>
+            <div class="col-4">
+                <a href="nine.html"><img src="Microwave.jpg" >  </a>
+                <a href="nine.html"><h4> Microwave </h4></a>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star-o">></span>
+                </div>
+                <p>$95</p>
+            </div>
+            <div class="col-4">
+               <a href="ten.html"><img src="Utensils.jpg" > </a>
+                <a href="ten.html"><h4>Utensils and tools </h4></a>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star">></span>
+                </div>
+                <p>$25</p>
+            </div>
+            <div class="col-4">
+               <a href="eleven.html"><img src="Drinkware.jpg" >  </a>
+                <a href="eleven.html"><h4>Drink Ware </h4></a>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star-o">></span>
+                </div>
+                <p>$100</p>
+            </div>
+          <div class="col-4">
+               <a href="twelve.html"> <img src="onion.jpg" ></a>
+          <a href="twelve.html"> <h4> Onion Chopper</h4></a>
+           <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class= "fa fa-star"></span>
+        </div>
+           <p>$28</p>
+            </div>
+            
+
+        </div>
+        <h2>Offer</h2>
+    <div class="offer">
+        <div class="small-container">
+<div class="row">
+    <div class="col-2">
+<img src="offer.jpg.jpg"  class="offerimg">
+    </div>
+    <div class="col-2">
+
+        <p>Exclusively available on Stop Shop</p>
+        <h1> Set Of 2 Jars</h1>
+        <small> Great set of 2 silver Jars made on the outside from stainless steel and on the inside from glass. Top has three sizes of holes which can be adjusted according to the amount of use and the size of the seasoning. Can be rotated to the sealed position when not in use, clean and hygienic, dust-proof and moisture-proof to meet your different needs. Ideal for spice, salt, pepper, tea, cocoa, etc.
+        </small>
+        <a href="offer.html" class="btn"> Buy Now &#8594;</a>
+    </div>
+
+</div>
+        </div>
+
+    </div>
+    <h2>Testimonials</h2>
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <span class="fa fa-quote-left "></span>
+                <p>
+I am really enjoying shopping here .here you can easily find all utensils at cheaper price
+                </p>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star-o">></span>
+                </div>
+<img src="https://miro.medium.com/max/1400/1*zurzWYgv6-4L123HBwzsKA.jpeg" >
+<h3> Alexa Parker</h3>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-quote-left "></span>
+                <p>
+                    “I just wanted to share a quick note and let you know that you guys do a really good job. I'm glad I decided Shop. It's really great how easy your websites are to update and manage.
+                </p>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star">></span>
+                </div>
+<img src="http://slodive.com/wp-content/uploads/2014/04/mad-men-hairstyle.jpg" >
+<h3> John Smith</h3>
+            </div>
+            <div class="col-3">
+                <span class="fa fa-quote-left "></span>
+                <p>
+Such a nice website to shop Products are too good and prices are also affordable
+                </p>
+                <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class= "fa fa-star-o">></span>
+                </div>
+<img src="https://i.pinimg.com/originals/d9/9d/6d/d99d6dd8fe7001382b5f58ac9d72c59e.jpg" >
+<h3> Hannah Baker</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="brands">
+    <h2>Our partners</h2>
+    <div class="small-container">
+    <div class="row">
+        <div class="col-5">
+            <img src="https://img.favpng.com/5/7/14/nike-free-swoosh-brand-logo-png-favpng-ERjLummJWxfJ8S5BvDmRjjYA6.jpg" >
+        </div>
+        <div class="col-5">
+            <img src="https://w7.pngwing.com/pngs/151/768/png-transparent-amazon-com-brand-logo-e-commerce-customer-international-volunteering-text-orange-logo.png" >
+        </div>
+        <div class="col-5">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lays_brand_logo.png" >
+        </div>
+        <div class="col-5">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAkFBMVEX29vYiHh/39/f6+vofGxwAAACFhITs7OxLSUocFxkVEBEHAAAYExT8+vsPCQsxKy10cnPh4OA2NDUuLSqRkJEqJieioKHV1dWpp6jPz89YVVfAvr8iHx/w8PCysrLn5+dmZGWYlpdpZ2h/fX6ysLFHREU/PT6Jh4jb29t6eHmTkZI1MjNZWFjIxsfS0dFPTU6lh7v/AAAO2UlEQVR4nO2diZaiOhCGJZWoBIzidUfFFe1W2vd/u5sA4kKA4Naxx3/O3DnnaiB8ViWVykIFfaSsCqp8pKgPrBL6wCqhD6wS+sAqoQ+sEvrAKqEPrBL6wCohzWGh+O8v1gAAjjXQHBYXr2xF1PlXKgowcQcDL8alPazGqrsFBN6iuYVX3xtB0GIW/9NDISXdYSGvzkYOTL4YW766qrCtdm1sGAYeu+EPpTksBD1qsNakamPcHYb++Kr6Ilj5TKDisvcQtZ56w/LET0sZFTUeibYWvajRB6dFTCMWpo2wNlrDQpUlMxKxwXDrTM47p+cJhiNqjE+wtHdDBGhuG2dilu3PNm7txOtZgmHz/M7Y1x0WqgSHsNEYn1fb5p3TaLB9Li+YmubFr9TRHBaaVI0LuzoBM6nfCmrPwwXu7oIVbg41hwXTY190rbFoROhs1XgSLth2L1gZ7Ev3OAuWVM4qlk38wVOsC5z1pUXTgxfFw9rCQo2DmYHp5I4Hd3J8jMfdeNK6+JWwXXfiy+sKC8HQKmAlrIsufhoPfgAY2Ofub5OldxxnaQoLwbSb0WJdO+PGeagvwtY6u7FNZz+ny2sKC+ZqrLjoevXAZ7hwQtOcHf08+lBLWMghqqz4I1lfjzMucBNWNhlNKxcX1hRWQJRZcbHuAB6Tv0G1etytYDoKrmMTDWEh4QzNoq4wVhTdY3vpPIQWb91jc23O47jkjI+GsITAbbIcRClhVg8e4IoI7SL3Z+2hJBekKSwE3tJSb7YM0cLMJ3cbFwzCeAXTqvRamsISFRsod4iRcdmtexPPqDayQ1a9iZSKtrBEpjIcHGLTVIRG/TsjVHBD32fVDI/WF5YITCljVnO0b1pqzb1Je/c9zkwYFltmpa41hsWb22Fn4zpebTs9qBkXNpZyB1ISDIXj2yMv6xI6wwrnDEEsT4TaTJ7aStGyFt7NDRdURUBKhpkX0BtWIghUIwnmD8vHEKHfoRoVkyObbNjvAmurZllc5n9B6ekyUYB3KDxuMJN8jOxrGsNCYp1B6IkV6KvHqGZ3dVOnOBGubg1yvFg/WMdEG0Dtx10Neit3yJuhgrTphTCr3jAVG3q6vc/rIPSDFYpH8G6rvsOMy26uZ7NxmQCV06qVb7e+qDG23LzuQUdYSLQfdcs+BqPYtBWH1YlYq1ayU4RtGxumn+vAOsKqoMkXKYvnmla75NgHNtTAONewNIX1XaKFypDtl+oUkYcxj0fzvVdHWKi/KzWEzqC1c0sEXKjDCrrCip6wYJDECfdAwyWSNjDkhmXWMwc6kbSEVaUJKnoPLvNLceyDwhiL9Qq+rSWsTmxZbBXMu1ZW7F6MEdN6X8kVGz3en4xJgWHpCSuI0n7mvgFQmc4sW8IFm2vTvFhgI5PNuCsWredCEIjJJLosMkP9YIkabaIk3DeIJ5m4s27KurBd9dx68YARm/t+Ua8I/bU5NnA3eD9YFdGELAk1bWsareSESrDggfy5eZlkMwHo14tHjNjunhmXTODsw1WY+0IUWsISjrE8HL4nsU3wcaLXG5mMx/ShbKs+bYg4v3ZQCMgw666ycSFw/PAiLD8gDb+rJSxhTZ53MWXHh9W9Wb3dHY+b/n4V93LgzFTCV+6LbhYu+DmEzmweipp3bWGJ/MxVxUS+ptYPgmDooOTBwTko5W5sa+HK1r5BY9qOGj5SEJCGVdAVlkxxguscI0xGakMj2/JXDlwsReWX237FiyrskUIO7K1gyQTeQnEgadr+VxAuDReL6TmpivPtx2VNPzvzftLbw6pAraW65AZTq92aT39qFUCT7WrZZsdVIGyqEuq/PyxuIh2snNARS8MJIYzxv8lQCltKrP4ALPEMU/+enA7uDhqKN3p/WLyj3I4UJ60lsvFKjdXfgCVmY1f123Bhtt6q5r3+CCzecnnfa4qLBtZpVvh8GdwbZh1uEx+3DHaEnZbcKIFjq4p6rv7vwBK+iILOmjJbdY0Sl1VmXuMvwYpG3D+9RX1nM8oH3Qqw7L2jPq/xt2DFIyJv6A6qs3WXB1NcFgeX44ctdQJ/DVao0xqJmudsg9VmzWTJ1piWwgj6eN2/COuo6Ow5Ds1zF5lBPm4rI/jTsBLxQfN0nbVxihRn/Y6X+Sdghan874y14lS51fpXYAmXHDSltPAuZ/3a5TX+FVjh6md5M0/Ucg7/FCxBS7p/ym59YKWFoCWbaTTrikvf/ilY0Yq1dKPVVMkpV/41WGKBjmR8TVcfWGkh5NUlwWne2veL4v8ULG5aPUlsao4+sGRCE0n+BuMPLKmSlXLnImrd4b8HK5Ds+SQ//8xUWCmhimSD2d+eN7yj0rBKLyVRzGkdYSm/mOCsaOanpcupK1X/0kWQ46f8kM3LwEI1NVXOTtybSD6OLikpmFSZX0DxXtL7X6x1QQCSSqSqfIUL5qnAlKkFWjGsxqiupNEy2bcAi/X1p364KhP6frrccc4X+hvFW8nvP9+eHh1N3NahuEjnalFpuJniUnRZpjdsdG1TSZQd92w36vT6wyjnCENy/YHdjWAhNDWY4p2kslk7yWtCbclSVZCINa+WMjQ6160W/VJqBWNYIM+LSYRJ7N+Sw8CsGJZ1beb4v3hZ46rEgTxymSReVIxgJlKfClOp+CphlR7z2C2lfeilYRl410dFsFJlIljIWd+52csQM31RAwiuwmlkocbm+jIXCit6CdlePAnWcdfGDbBEJe8Xi44NvjptLldXcRSaXK3bfR4se3YzLNlQo7SiHwt5vrqV0uVlqwXO5QjxebDiMfotsKSJyrKi3yEsR5bHy9BF4lg8MPQuesT7YVHGmGxT1oNhYX4fuY3Y8vvTTjYsU14klWVHkwW7+PxOWPb3YDDYdNPP8VhY2KwOemuZxdF9b/AlWd2RA4uuO4Mvyd7z9JQEeIeze9qzO2GxLQA03HSVHgoLd6f8Ns4+TctueQCVQXoglw3LHG3FNrJ0wyiZv0HD0+8wxm2lqcMcWP1wT9YmdeuHwuKPgZKzmC4vtgUexDbqqYplw7LERl8ef8nuknpy6J3NIjKlLHwBLFk081BYUdcGznWSaWywcEwn6UCzYZHQmSBtjdKZQT5GPD3TunjnjjawtumMHAt7e4llPwoWmoQn80fRqd1R32Hxm7CQePJfgMVpjU4716nCcZQawBK1uLYs/nOzrDj2YbB4lzhLvmoeild4awrLSCzrmbCOm1ij7xzcotWlGsN6vmUJWrvk+ib9LjgHQmNYz7csFO7AS15ogK19fp+oLyz6Alghrc4p3qL5uXh9YT3fDY+71Xv4WC3z8K6wXtDAx7R+DrEr4m5uj6gvrBe44VG84UpgvallvaI3jCFALX4Ylhs9aAzrdZYl5vXiAwv67wnrhW7Iy8SZCtbL29SqL6wXuiEvEyfUjlNHbwfrpZZ1zD5aq5z+UF9Yv+KGxvUU45vAeq0bJtlVWs3+qsawXmpZSc0wyTYtfWG91g2POcaxQdw3hPVaN0zK4JxjEjWG9VLLGjKFr+oL66VueLpa3tYUfWG91A2TNTm5Z1FrDOuVlsWfM9qKiMc5B3DqC+ulbsgpROvssPGelvVKNxQPGh1mYL4nrJdaFi+2Ck+9pjmbLfSF9Vo3FCSC0ZjRvFMe9IX1YjcUTzQJest5zmxYLiyxfidd2T/nhgkd1Lg8yLQErC1AA7npNyRo7Ibhy8VutqxC5SyT3PR6vaVkmaK2bjimvVCtVMXSa0ohOQjpCsdtsF6zAPeBbjgeGyyUbMnlBSzUqAynm8Wi1XO3cPXy4xthZUlfN8zUJazwOH5xCBkhtP01jA7902/TwJN7w+wqJ7BEn+XMGGGznutO53tCzKXyO1Ru2Y7yracb5iiBFS72HZP2fCIaLN75eZsu8YflDnUts9EpPozkTd0Qpk2y6CfHpCM0HFnrcserlIBF4vfhvacbgmNYswlnBTyoaoSRpFe3/HjPwM0r/wwsk02q8YV1dMO4ktmwUG1POCuYEstizdlUvKsOnDpZxrufb4bV3O12//E/4j//Rf/s/P3qeEUN3RA3Q3WzYcHKav4A90XLwNS26cIJWzETC0csPLA0GxZd/QxT2p52dGvohswVdfzppIocYaHJnmw4Ew4L15d7itlSbOOotMjXfbBYvwEpnV3vhm2/T3bDMakVDHcgMCwxUOawaBWgb2MWdpABaW8VAq2irEO2UrDGv+6G0SxWHqy5NRKmFMFCsMbh2BtVxnk5v2fA+n03LITVmJEwSIwtazI2aXhKBv//RW+gex6s33FDBVh+tFuat/P2wh2sbVaF0A87pPCtag+HFTwQVnk3HBfD2lE3tiyxXcdk+2hhA8yJShInD1Z+kyeDNRW/EwTauiH4LKriiocOvPi3c2zLXm9Z9qLCW82KZL+qLm64j9omETqMME7epdZoEZWjex7aGxpG1at5m/Q7LXVxQ942LY4N/GZumn7/aHH05b2hgZk/81nqUvq4oWublWOcVZkxGh1RAA7ZFTzto2GFrbopPb5YFzdEXj1825yAtWw4vDdcirE0ig3uibBkJ35mSBc3FC35wUERLEABj+BdHqL22wpvgrwP1qgErLYebiiOZSMbECdS8+4P8SaMdPljtsi9J4YUwYLUKVTZoq1oK/1vu2E4DKRzAM91++LRA/4vVK2xwgbp+2AN1c/cGruauKFwRJP2JvEkWPg2zo7VVTwQ/nZYFTRXPDkMk2pc0Ye4IbujgRePOyfW4ifMoAhWwYzYiudQJ7DGjF6JFMJCg651XUoiyziefActkrpLuFkGbXH6/rFlpYvEsJrpIjGsdJEIVphgQo2gTchsEGydbTAYEXJQiRrOYTU61WstC49nQbAdpIqltBlskzMV019fBuEDeJt0wRBWY7pMFQl9GnmSKofNdCNIFalenEMKTmdtka7v+wZh9Z6nyuoIq5LO86m8xw5Jikl0qmbWXWQXKl+kUXSxpNredFk3zO5h49ZU39d3BktpRvZuZdykcJ7g8RXhZBuqJnFWkZdQerx+o9pvC+s39IFVQh9YJfSBVUIfWCX0gVVCH1gl9IFVQh9YJYTue6XEP6b/AYXcjZczBbO2AAAAAElFTkSuQmCC" >
+        </div>
+        <div class="col-5">
+            <img src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/100-Famous-Brand%20Logos-From-The-Most-Valuable-Companies-of-2020/Adidas.png" >
+        </div>
+</div>
+</div>
+
+</div>
+
+</div>
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>stopshop</h3>
+
+        <p class="footer-links">
+            <a href="home.html" class="link-1">Home</a>
+            
+            <a href="About.html">About</a>
+        
+            <a href="product.html">Product</a>
+        
+        
+            
+            <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name"> © stopshop</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <a href="https://www.google.com/maps/dir/24.8840192,67.0334976/aptech+garden+location/@24.876021,67.0195018,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3eb33e6b1566c46f:0x65318f4eb62c7aa8!2m2!1d67.024241!2d24.867175"><i class="fa fa-map-marker"></i>
+            <p><span> Aptech,Garden East</span> Karachi, Pakistan</p></a>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.000.000.000</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:@stopshop.com">@stopshop.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>Our aim is to connect our customers in social world by providing best products</p>
+            </span>
+            </p>
+
+        <div class="footer-icons">
+
+            <a href="https://m.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+            <a href="www.github.com"><i class="fa fa-github"></i></a>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

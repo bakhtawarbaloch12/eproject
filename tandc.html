@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+  h1{
+    text-align: center;
+    margin: 2ch;
+  }
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  height: 980px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  
+  
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        
+
+    }
+    nav{
+        flex: 1;
+        text-align: right;
+    }
+    nav ul{
+        display: inline-block;
+        list-style: none;
+
+    }
+    nav li{
+        display: inline-block;
+        margin-right: 20px;
+    
+    }
+    body{
+        font-family: 'Poppins', sans-serif;
+        margin: auto;
+        background:  radial-gradient(rgb(224, 203, 248),#f7e822);
+    }
+   
+a{
+    color: rgb(7, 4, 0);
+    text-decoration: none;
+}
+
+.footer-distributed{
+	background: rgb(102, 102, 102);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #8d886c;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+</style>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                  <a href="home.html"><img src="stopshoplogo.png" width="105px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li> <a href="home.html">Home </a></li>
+                        <li> <a href="product.html">Products </a></li>
+                        <li> <a href="About.html"> About us</a></li>
+                        <li> <a href="contact.html">Contact </a></li>
+                        
+                    </ul>
+    
+                </nav>
+                <img src="https://www.iconpacks.net/icons/2/free-add-to-basket-icon-3042-thumb.png" alt="" width="30px" height="30px">
+         
+                    </div>
+                    </div>
+                    </div>
+            
+    </div>
+    <h1>Table ware </h1>
+    <br><br> <br>
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Porcelain </h3>
+            <img src="https://imgusr.tradekey.com/p-4725606-20100915065403/porcelain-tableware-crockery.gif"   alt=""> 
+            
+           <p>  Porcelain tableware Crockery  and dinnerware  beautiful set <br>  Tea Set Mugs Vases Lamps Plates Bowls Platters Square Rectangular <br>  <br> Give aways Gift items Soup sets Baby Sets Serving sets Baby Oval Platters Soup Cups Dallah Cawa <br> In Black and White</p> 
+         <p>  $70</p>
+         <a href="buy.html
+         "><button>Buy Now</button></a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Crockery Set</h3>
+            <img src="https://4.imimg.com/data4/MB/MI/MY-6389443/crockery-set-500x500.jpg" alt="">
+            <p> Stop Shop one of the credible market names, we are willingly involved in offering to our patrons Crockery Set.
+              <br>
+              Features:
+              
+              High quality,
+              Precise design, Fine finish
+
+              Long lasting
+          
+          </p>
+            
+            <p>$80</p>
+            <a href="buy.html
+            "><button>Buy Now</button></a></div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3>Dinnerware</h3>
+            <img src="https://i.pinimg.com/736x/80/39/b6/8039b639772e8b5852c8ab50a16c6f08.jpg" alt="">
+            <p>Crockery perfect for your table collection. The Italia F Spotty collection Dishes,cups and pots that are in excellent condition (meaning no cracks or previous repairs) can be put up for renting.</p>
+            <p>$40</p><a href="buy.html
+            "> <button>Buy Now</button></a></div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <h3> White Set</h3>
+            <img src="https://www.allmall.pk/wp-content/uploads/2018/11/HTB1D3p7KkyWBuNjy0Fpq6yssXXay.jpg" alt="">
+            <p>56piece royal floral painting, buffet dishes, porcelain dinner plate set, <br> Model Number: buffet dishes, dinner plate sets, crockery set of dishes <br>
+              Description:buffet dishes, dinner plate sets, crockery set of dishes. Material: Ceramic Pattern </p>
+            <p>$100</p>
+            <a href="buy.html
+         "><button>Buy Now</button></a>
+          </div>
+        </div>
+      </div> 
+      <footer class="footer-distributed">
+
+        <div class="footer-left">
+    
+            <h3>stopshop</h3>
+    
+            <p class="footer-links">
+                <a href="home.html" class="link-1">Home</a>
+                
+                <a href="About.html">About</a>
+            
+                <a href="product.html">Product</a>
+            
+            
+                
+                <a href="product.html">Contact</a>
+            </p>
+    
+            <p class="footer-company-name"> © stopshop</p>
+        </div>
+    
+        <div class="footer-center">
+    
+            <div>
+                <a href="https://www.google.com/maps/dir/24.8840192,67.0334976/aptech+garden+location/@24.876021,67.0195018,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3eb33e6b1566c46f:0x65318f4eb62c7aa8!2m2!1d67.024241!2d24.867175"><i class="fa fa-map-marker"></i>
+                <p><span> Aptech,Garden East</span> Karachi, Pakistan</p></a>
+            </div>
+    
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1.000.000.000</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:@stopshop.com">@stopshop.com</a></p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+            <p class="footer-company-about">
+                <span>Our aim is to connect our customers in social world by providing best products</p>
+                </span>
+                </p>
+    
+            <div class="footer-icons">
+    
+                <a href="https://m.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+                <a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+                <a href="www.github.com"><i class="fa fa-github"></i></a>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+   
+</html>
